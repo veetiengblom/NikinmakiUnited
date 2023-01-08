@@ -1,7 +1,7 @@
 {
-  "name": "modernportfolio",
+  "name": "nikinmakiunited",
   "version": "1.0.0",
-  "description": "Responsive portfolio webiste",
+  "description": "Responsive webiste",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"

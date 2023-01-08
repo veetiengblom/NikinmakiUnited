@@ -1,11 +1,29 @@
 //Widescreens
 @include mediaXl {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heiding {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 //Desktops & Laptops
 @include mediaLg {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heiding {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }

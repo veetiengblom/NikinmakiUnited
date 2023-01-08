@@ -9,9 +9,9 @@
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Welcome to Nikinmäki United page</title>
+    <title>Standings</title>
   </head>
-  <body id="bg-img">
+  <body>
     <header>
       <div class="menu-btn">
         <div class="btn-line line-1"></div>
@@ -22,10 +22,10 @@
       <div class="menu">
         <div class="menu-links">
           <div class="portrait"></div>
-          <div class="nav-item current">
+          <div class="nav-item">
             <a href="index.html" class="nav-link"> Home </a>
           </div>
-          <div class="nav-item">
+          <div class="nav-item current">
             <a href="standings.html" class="nav-link"> Standings </a>
           </div>
           <div class="nav-item">
@@ -38,25 +38,34 @@
       </div>
     </header>
 
-    <main id="home">
-      <h1 class="lg-heading">
-        Nikinmäki <span class="text-secondary"> United </span>
-      </h1>
-      <h2 class="sm-heading">
-        Salibandyä sen viihdyttävimmässä muodossa <br />
-        Since 2020
-      </h2>
-      <div class="icons">
-        <a href="https://www.instagram.com/nikinmakiunited/?hl=fi">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://fi-fi.facebook.com/nikinmakiunited/">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
+    <main id="standings">
+      <h1 class="lg-heading">Standings</h1>
+      <h2 class="sm-heading"><span class="text-secondary">2022-2023</span></h2>
+      <div class="standings">
+        <div class="floorball">
+          <h3>Salibandy</h3>
+          <h4>Miesten 4.divisioona</h4>
+          <a
+            href="https://salibandy.fi/tulospalvelu/46/9230/10145/2022-2023/sarjataulukko"
+            class="btn-light"
+          >
+            <i class="fas fa-chart-bar"></i> Sarjataulukko
+          </a>
+        </div>
+        <div class="football">
+          <h3>Jalkapallo</h3>
+          <h4>Miesten 6.divisioona</h4>
+          <a
+            href="https://tulospalvelu.palloliitto.fi/category/M6!etejp22/group/7/"
+            class="btn-light"
+          >
+            <i class="fas fa-chart-bar"></i> Sarjataulukko
+          </a>
+        </div>
       </div>
     </main>
 
-    <!-- <footer id="main-footer">Copyright &copy; 2022</footer> -->
+    <footer id="main-footer">Copyright &copy; 2022</footer>
     <script src="js/main.js"></script>
   </body>
 </html>
