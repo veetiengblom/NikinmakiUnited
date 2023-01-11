@@ -58,6 +58,7 @@
 .menu {
   position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
   //opacity: 0.9;
   visibility: hidden;
@@ -76,9 +77,6 @@
     width: 25%;
     height: 100vh;
     overflow: hidden;
-  }
-
-  &-links {
     margin: 0;
     padding: 0;
     background: $primary-color;

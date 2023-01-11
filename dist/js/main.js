@@ -29,3 +29,41 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Track mouse movement
+const track = document.getElementById("image-track");
+
+window.onmousedown = (e) => {
+  track.dataset.mouseDownAt = e.clientX;
+};
+
+window.onmouseup = (e) => {
+  track.dataset.mouseDownAt = "0";
+  track.dataset.previousPercentage = track.dataset.percentage;
+  var elem = document.elementFromPoint(
+    $(window).width() / 2,
+    $(window).height() / 2
+  );
+  const moment = document.getElementById(elem);
+  if (elem == 1) {
+    moment.style.visibility = "visible";
+  }
+};
+window.onmousemove = (e) => {
+  if (track.dataset.mouseDownAt == "0") return;
+
+  const mouseCurrent = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+  const mouseMax = window.innerWidth / 2;
+  const percentage = (mouseCurrent / mouseMax) * -100;
+  const nextPercentage = Math.min(
+    Math.max(parseFloat(track.dataset.previousPercentage) + percentage, -87),
+    0
+  );
+  track.dataset.percentage = nextPercentage;
+
+  track.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+  for (const image of track.getElementsByClassName("image")) {
+    image.style.objectPosition = `${nextPercentage + 100}% 50%`;
+  }
+};
