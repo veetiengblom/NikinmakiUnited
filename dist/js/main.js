@@ -67,3 +67,17 @@ window.onmousemove = (e) => {
     image.style.objectPosition = `${nextPercentage + 100}% 50%`;
   }
 };
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//KESKEN FIXX
+//Flip player image on click
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Flip image on click
+$(document).ready(function () {
+  $(".box").click(function () {
+    $(this).toggleClass("hover");
+  });
+});
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//KESKEN FIXX
+//Flip player image on click
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
