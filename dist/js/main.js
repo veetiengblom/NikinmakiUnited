@@ -30,53 +30,31 @@ function toggleMenu() {
   }
 }
 
-//Track mouse movement
-const track = document.getElementById("image-track");
-
-window.onmousedown = (e) => {
-  track.dataset.mouseDownAt = e.clientX;
-};
-
-window.onmouseup = (e) => {
-  track.dataset.mouseDownAt = "0";
-  track.dataset.previousPercentage = track.dataset.percentage;
-  var elem = document.elementFromPoint(
-    $(window).width() / 2,
-    $(window).height() / 2
-  );
-  const moment = document.getElementById(elem);
-  if (elem == 1) {
-    moment.style.visibility = "visible";
-  }
-};
-window.onmousemove = (e) => {
-  if (track.dataset.mouseDownAt == "0") return;
-
-  const mouseCurrent = parseFloat(track.dataset.mouseDownAt) - e.clientX;
-  const mouseMax = window.innerWidth / 2;
-  const percentage = (mouseCurrent / mouseMax) * -100;
-  const nextPercentage = Math.min(
-    Math.max(parseFloat(track.dataset.previousPercentage) + percentage, -87),
-    0
-  );
-  track.dataset.percentage = nextPercentage;
-
-  track.style.transform = `translate(${nextPercentage}%, -50%)`;
-
-  for (const image of track.getElementsByClassName("image")) {
-    image.style.objectPosition = `${nextPercentage + 100}% 50%`;
-  }
-};
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //KESKEN FIXX
 //Flip player image on click
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Flip image on click
+// $(document).ready(function () {
+//   $(".flip-boxh").click(function () {
+//     $(this).find(".flip-box-innerh").toggleClass("flipedh");
+//   });
+// });
 $(document).ready(function () {
-  $(".box").click(function () {
-    $(this).toggleClass("hover");
+  $(".flip-box#floorball").click(function () {
+    $(".flip-box#floorball").each(function () {
+      $(this).toggleClass("hover");
+    });
   });
 });
+$(document).ready(function () {
+  $(".flip-box#football").click(function () {
+    $(".flip-box#football").each(function () {
+      $(this).toggleClass("hover");
+    });
+  });
+});
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //KESKEN FIXX
 //Flip player image on click

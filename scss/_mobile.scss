@@ -14,6 +14,21 @@
     img {
       width: 150px;
     }
+    .flip-box {
+      width: 150px;
+      height: 225px;
+    }
+
+    .flip-box-inner {
+      width: 150px;
+      height: 186.74px;
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+      width: 150px;
+      height: 186.74px;
+    }
   }
 }
 
@@ -35,6 +50,20 @@
     grid-template-columns: repeat(3, 1fr);
     img {
       width: 137px;
+    }
+    .flip-box {
+      width: 137px;
+      height: 200px;
+    }
+
+    .flip-box-inner {
+      width: 137px;
+      height: 170.43px;
+    }
+    .flip-box-front,
+    .flip-box-back {
+      width: 137px;
+      height: 170.43px;
     }
   }
 }
@@ -72,6 +101,20 @@
     grid-template-columns: repeat(2, 1fr);
     img {
       width: 150px;
+    }
+    .flip-box {
+      width: 150px;
+      height: 225px;
+    }
+
+    .flip-box-inner {
+      width: 150px;
+      height: 186.74px;
+    }
+    .flip-box-front,
+    .flip-box-back {
+      width: 150px;
+      height: 186.74px;
     }
   }
 }
