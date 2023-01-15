@@ -30,16 +30,7 @@ function toggleMenu() {
   }
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//KESKEN FIXX
-//Flip player image on click
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//Flip image on click
-// $(document).ready(function () {
-//   $(".flip-boxh").click(function () {
-//     $(this).find(".flip-box-innerh").toggleClass("flipedh");
-//   });
-// });
+//Flip images
 $(document).ready(function () {
   $(".flip-box#floorball").click(function () {
     $(".flip-box#floorball").each(function () {
@@ -54,8 +45,3 @@ $(document).ready(function () {
     });
   });
 });
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//KESKEN FIXX
-//Flip player image on click
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -4,7 +4,8 @@
   "description": "Responsive webiste",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Veeti Engblom",
   "license": "MIT",
