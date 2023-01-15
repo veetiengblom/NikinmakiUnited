@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive webiste",
   "main": "index.js",
+  "homepage": "https://veetiengblom.github.io/NikinmakiUnited",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
@@ -10,6 +11,7 @@
   "author": "Veeti Engblom",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "node-sass": "^8.0.0"
   }
 }
