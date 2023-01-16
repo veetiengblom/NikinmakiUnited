@@ -113,25 +113,29 @@ main {
     background-color: transparent;
     width: 200px;
     height: 278px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
     padding-bottom: 10px;
     &:hover {
       cursor: pointer;
-      opacity: 0.8;
     }
   }
 
-  .flip-box-inner {
-    position: relative;
-    width: 200px;
-    height: 249.5px;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
+  // .flip-box-inner {
+  //   position: relative;
+  //   width: 200px;
+  //   height: 249.5px;
+  //   text-align: center;
+  //   transition: transform 0.6s;
+  //   transform-style: preserve-3d;
+  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  // }
 
-  .flip-box.hover .flip-box-inner {
+  .flip-box.flipped {
     transform: rotateY(180deg) !important;
+    .name {
+      transform: rotateY(180deg);
+    }
   }
 
   .flip-box-front,
@@ -151,6 +155,34 @@ main {
     color: #fff;
     transform: rotateY(180deg);
   }
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+.card.fliped {
+  transform: rotateY(180deg);
 }
 
 //Button styles

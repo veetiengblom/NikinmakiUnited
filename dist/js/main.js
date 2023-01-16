@@ -31,17 +31,19 @@ function toggleMenu() {
 }
 
 //Flip images
-$(document).ready(function () {
-  $(".flip-box#floorball").click(function () {
-    $(".flip-box#floorball").each(function () {
-      $(this).toggleClass("hover");
-    });
+var floorballboxs = document.querySelectorAll(".flip-box#floorball");
+for (const floorballbox of floorballboxs) {
+  floorballbox.addEventListener("click", function () {
+    for (var i = 0; i < floorballboxs.length; i++) {
+      floorballboxs[i].classList.toggle("flipped");
+    }
   });
-});
-$(document).ready(function () {
-  $(".flip-box#football").click(function () {
-    $(".flip-box#football").each(function () {
-      $(this).toggleClass("hover");
-    });
+}
+var footballboxs = document.querySelectorAll(".flip-box#football");
+for (const footballbox of footballboxs) {
+  footballbox.addEventListener("click", function () {
+    for (var i = 0; i < footballboxs.length; i++) {
+      footballboxs[i].classList.toggle("flipped");
+    }
   });
-});
+}

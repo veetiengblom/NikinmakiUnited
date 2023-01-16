@@ -192,20 +192,15 @@ main {
     background-color: transparent;
     width: 200px;
     height: 278px;
-    padding-bottom: 10px; }
-    .roster-container .flip-box:hover {
-      cursor: pointer;
-      opacity: 0.8; }
-  .roster-container .flip-box-inner {
-    position: relative;
-    width: 200px;
-    height: 249.5px;
-    text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
-  .roster-container .flip-box.hover .flip-box-inner {
+    padding-bottom: 10px; }
+    .roster-container .flip-box:hover {
+      cursor: pointer; }
+  .roster-container .flip-box.flipped {
     transform: rotateY(180deg) !important; }
+    .roster-container .flip-box.flipped .name {
+      transform: rotateY(180deg); }
   .roster-container .flip-box-front,
   .roster-container .flip-box-back {
     position: absolute;
@@ -218,6 +213,29 @@ main {
     background-color: #444;
     color: #fff;
     transform: rotateY(180deg); }
+
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d; }
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden; }
+
+.card__face--front {
+  background: red; }
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg); }
+
+.card.fliped {
+  transform: rotateY(180deg); }
 
 .btn, .btn-dark, .btn-light {
   display: block;
